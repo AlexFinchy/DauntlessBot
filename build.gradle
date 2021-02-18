@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    maven {
+        url  "https://dl.bintray.com/dv8fromtheworld/maven"
+    }
+}
+
+dependencies {
+    compile("net.dv8tion:JDA:4.2.0_168")
+}
+
+
+
