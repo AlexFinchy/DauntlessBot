@@ -61,7 +61,7 @@ public class MessageListener extends ListenerAdapter {
 								
 								TextChannel textchannel = (TextChannel) category.createTextChannel("ticket-" + ChannelNumber).complete();
 
-								textchannel.createPermissionOverride(member).setAllow(Permission.MESSAGE_WRITE).setAllow(Permission.MESSAGE_READ).complete();
+								textchannel.upsertPermissionOverride(member).grant(Permission.MESSAGE_READ,Permission.MESSAGE_WRITE).queue();
 
 								Ticket ticket = new Ticket(textchannel, member);
 								
@@ -71,7 +71,7 @@ public class MessageListener extends ListenerAdapter {
 								
 								TextChannel textchannel = (TextChannel) category.createTextChannel("ticket-" + 1).complete();
 
-								textchannel.createPermissionOverride(member).setAllow(Permission.MESSAGE_WRITE).setAllow(Permission.MESSAGE_READ).complete();
+								textchannel.upsertPermissionOverride(member).grant(Permission.MESSAGE_READ,Permission.MESSAGE_WRITE).queue();
 
 								Ticket ticket = new Ticket(textchannel, member);
 								
